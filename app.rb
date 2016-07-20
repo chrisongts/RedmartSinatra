@@ -2,7 +2,7 @@ class RedmartSinatraApp < Sinatra::Base
 
   get '/' do
 
-    erb 'Hello World'
+    erb '@ Red Mark Online Store @'
   end
 
   get '/users' do
