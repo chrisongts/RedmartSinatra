@@ -1,11 +1,10 @@
 class RedmartSinatraApp < Sinatra::Base
 
   get '/' do
-
     erb '@ Red Mark Online Store @'
   end
 
-  get '/about'
+  get '/about' do
     erb '<h1>About</h1>'
   end
 
