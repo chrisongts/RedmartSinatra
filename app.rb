@@ -17,4 +17,11 @@ class RedmartSinatraApp < Sinatra::Base
 
   end
 
+  get '/users/:id' do
+
+    @user = User.find(params[:id])
+    erb :'each_user'
+
+  end
+
 end
