@@ -5,6 +5,9 @@ Bundler.require
 # this is the Model
 require './models/user'
 require './models/purchase'
+require './models/product'
+require './models/category'
+require './models/brand'
 
 # can change
 require './app'
