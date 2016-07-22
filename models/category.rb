@@ -1,3 +1,3 @@
-lass Category < ActiveRecord::Base
+class Category < ActiveRecord::Base
 
 end

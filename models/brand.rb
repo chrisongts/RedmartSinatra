@@ -1,3 +1,3 @@
-lass Brand < ActiveRecord::Base
+class Brand < ActiveRecord::Base
 
 end
