@@ -4,10 +4,35 @@
 <title>Redmart Sinatra</title>
 <link rel="stylesheet" href="<%= url('css/style.css') %>"
       media="screen" title="no title" charset="utf-8">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 </head>
 <body>
-  <h1>Redmart Sinatra App</h1>
-  <h2>Welcome To Red Mart</h2>
+  <div class="head">
+    <!-- <img src="<%= url('img/mini_mart.png') %>"
+    <h1 id="welcome">Welcome To My Mini Mart</h1> -->
+
+      <header>
+        <div id="main">
+
+        <div id="welcome">
+
+          <img src="<%= url('img/mini_mart.png') %>">
+          <h1>Welcome to My Mini Mart </h1>
+
+        </div>
+
+
+        <nav>
+          <ul id="head_list">
+            <li><a href="/users">Users List</a></li>
+            <li><a href="/users/new">New User Registraton</a></li>
+            <li><a href="/products">Product List</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      </header>
+  </div>
   <%= yield %>
 
 </body>

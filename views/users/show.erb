@@ -1,0 +1,14 @@
+<h3><%= @user[:name] %>'s Page</h3>
+
+<ul id="view">
+  <li>Address     : <%= @user[:address] %><br /></li>
+  <li>Email       : <%= @user[:email] %><br /></li>
+  <li>CC Number   : <%= @user[:cc_number] %><br /></li>
+  <li>Date Joined : <%= @user[:date_joined] %><br /></li>
+</ul>
+<!-- <p>Address : <%= @user[:address] %></p> -->
+
+<form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

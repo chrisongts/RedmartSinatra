@@ -12,5 +12,7 @@ require './models/brand'
 # can change
 require './app'
 
+use Rack::MethodOverride
+
 #Class refers to the Class name in app.rb
 run RedmartSinatraApp
