@@ -36,7 +36,7 @@ class RedmartSinatraApp < Sinatra::Base
 
     if @new_user.save
       # go to all users list
-      redirect("/users")
+      redirect('/users')
     else
       # throw an error
       erb :"users/new"
@@ -46,15 +46,10 @@ class RedmartSinatraApp < Sinatra::Base
   # put '/users'
 
   put '/users/:id' do
-
     @updated_user = User.find(params[:id])
 
-    if @updated_user.update_attributes( params[:user] )
-      redirect("/users")
-    end
-
+    redirect('/users') if @updated_user.update_attributes(params[:user])
   end
-
 
   delete '/users/:id' do
     puts params[:id]
@@ -62,16 +57,14 @@ class RedmartSinatraApp < Sinatra::Base
 
     if @deleted_user.destroy
       # go to all users list
-      redirect("/users")
+      redirect('/users')
     else
       # throw an error
       erb :"users/#{ @deleted_user.id }"
     end
-
   end
 
-
-    # post '/users/:id' do
-    #   "Hello world chris"
-    # end
+  # post '/users/:id' do
+  #   "Hello world chris"
+  # end
 end
